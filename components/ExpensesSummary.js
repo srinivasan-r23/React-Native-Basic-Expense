@@ -3,7 +3,7 @@ import React from "react";
 import { GlobalStyles } from "../constants/styles";
 
 const ExpensesSummary = ({ periodName, expenses }) => {
-  const expensesSum = expenses.reduce((sum, expense) => {
+  const expensesSum = expenses?.reduce((sum, expense) => {
     return sum + expense?.amount;
   }, 0);
 
