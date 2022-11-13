@@ -1,6 +1,6 @@
 import { StyleSheet } from "react-native";
 import React, { useContext } from "react";
-import ExpensesOutput from "../components/ExpensesOutput";
+import ExpensesOutput from "../components/ExpensesOutput/ExpensesOutput";
 import { ExpensesContext } from "../store/expenses-context";
 import { getDateMinusDay } from "../utils/date";
 

@@ -38,11 +38,20 @@ const DUMMY_EXPENSES = [
     date: new Date("2022-10-25"),
   },
 ];
+function makeid(length) {
+  var result           = '';
+  var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+  var charactersLength = characters.length;
+  for ( var i = 0; i < length; i++ ) {
+      result += characters.charAt(Math.floor(Math.random() * charactersLength));
+  }
+  return result;
+}
 function expensesReducer(state, action) {
   switch (action.type) {
     case "ADD":
       const id = new Date().toString() * Math.random().toString();
-      return [{ ...action.payload, id: id }, ...state];
+      return [{ ...action.payload, id: makeid(1) }, ...state];
     case "UPDATE":
       const updatableExpenseIndex = state.findIndex(
         (expense) => expense?.id === action.payload?.id

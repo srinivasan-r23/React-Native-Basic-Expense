@@ -1,6 +1,6 @@
 import { StyleSheet, Text, View } from "react-native";
 import React from "react";
-import { GlobalStyles } from "../constants/styles";
+import { GlobalStyles } from "../../constants/styles";
 
 const ExpensesSummary = ({ periodName, expenses }) => {
   const expensesSum = expenses?.reduce((sum, expense) => {
